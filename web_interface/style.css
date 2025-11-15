@@ -1,28 +1,28 @@
 :root {
     /* Core Color Variables */
     --bg-main: #f5f9fc;            /* Soft medical white-blue */
-    --primary-blue: #1a73e8;       /* Trustworthy med-tech blue */
+    --primary-blue: #ffffff;       /* Trustworthy med-tech blue */
     --aqua-teal: #33c8c1;          /* Fresh diagnostic/clinical accent */
-    --health-green: #36d98a;       /* Subtle wellness success color */
-    --alert-red: #ff5d5d;          /* Clean, non-harsh error color */
+    --health-green: #00c968;       /* Subtle wellness success color */
+    --alert-red: #ff5555;          /* Clean, non-harsh error color */
 
     /* Enhanced Theme Variables */
     --bg-900: #e9f1f7;             /* Light cool background layer */
     --panel: #ffffff;              /* Panels/cards – clean white */
     --muted: #7b8a9c;              /* Muted text/icons */
-    --accent: #1a73e8;             /* Primary accent */
-    --accent-2: #33c8c1;           /* Secondary accent */
+    --accent: #002d67;             /* Primary accent */
+    --accent-2: #2cfff4;           /* Secondary accent */
     --glass: rgba(26, 115, 232, 0.06);  /* Soft frosted blue */
     --glass-2: rgba(51, 200, 193, 0.05);/* Subtle teal tint */
-    --card-border: rgba(0, 0, 0, 0.06); /* Light card border */
+    --card-border: rgba(99, 1, 1, 0.06); /* Light card border */
 }
 
 
 /* Global Page Background - Neon Cyberpunk */
 body {
     background: 
-        radial-gradient(1400px 1400px at 90% 10%, rgba(214, 26, 255, 0.12), transparent 45%),
-        radial-gradient(1200px 1200px at 10% 90%, rgba(106, 13, 173, 0.08), transparent 45%),
+        radial-gradient(1400px 1400px at 90% 10%, rgba(251, 233, 255, 0.12), transparent 45%),
+        radial-gradient(1200px 1200px at 10% 90%, rgba(0, 0, 0, 0.805), transparent 45%),
         #000000;
     color: #e8e8e8;
     -webkit-font-smoothing: antialiased;
@@ -39,7 +39,7 @@ body {
     box-shadow: 
         0 0 10px var(--glow-magenta),
         0 0 20px var(--glow-magenta),
-        0 0 30px rgba(214, 26, 255, 0.5);
+        0 0 30px rgba(26, 34, 255, 0.5);
     border-radius: 2px;
     position: absolute;
     opacity: 0.6;
@@ -71,16 +71,16 @@ body {
 
 /* Header Styling */
 header {
-    background: linear-gradient(90deg, rgba(10, 10, 10, 0.8), rgba(0, 0, 0, 0.6));
-    border-bottom: 1px solid rgba(214, 26, 255, 0.15);
-    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.8) inset;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
+    border-bottom: 1px solid rgba(26, 91, 255, 0.15);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.475) inset;
     backdrop-filter: blur(10px);
 }
 
 header h1 {
     font-weight: 800;
     letter-spacing: -0.02em;
-    text-shadow: 0 0 20px rgba(214, 26, 255, 0.3);
+    text-shadow: 0 0 20px rgba(26, 37, 255, 0.581);
 }
 
 header p { 
@@ -89,7 +89,7 @@ header p {
 
 /* Controls Container */
 .bg-slate-800 {
-    background: linear-gradient(180deg, rgba(214, 26, 255, 0.03), rgba(106, 13, 173, 0.01));
+    background: linear-gradient(180deg, rgba(6, 1, 98, 0.03), rgba(106, 13, 173, 0.01));
     border: 1px solid var(--card-border);
     box-shadow: 
         0 8px 30px rgba(0, 0, 0, 0.8),
@@ -101,7 +101,7 @@ header p {
 textarea#wiceInput, textarea#voiceInput {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(214, 26, 255, 0.02));
     border-radius: 12px;
-    border: 1px solid rgba(214, 26, 255, 0.2) !important;
+    border: 1px solid rgba(26, 57, 255, 0.2) !important;
     color: #e8e8e8;
     min-height: 110px;
     padding: 12px;
@@ -128,9 +128,9 @@ button, .btn {
     background: linear-gradient(90deg, var(--glow-magenta), var(--neon-pink));
     border: none;
     box-shadow: 
-        0 6px 24px rgba(214, 26, 255, 0.3),
-        0 12px 40px rgba(255, 79, 216, 0.2),
-        0 0 60px rgba(214, 26, 255, 0.1);
+        0 6px 24px rgba(10, 68, 255, 0.3),
+        0 12px 40px rgba(79, 103, 255, 0.2),
+        0 0 60px rgba(251, 235, 255, 0.1);
     transform: translateY(0);
     color: #ffffff;
 }
@@ -138,8 +138,8 @@ button, .btn {
 #startDemo:hover { 
     transform: translateY(-3px); 
     box-shadow: 
-        0 18px 60px rgba(214, 26, 255, 0.4),
-        0 0 80px rgba(255, 79, 216, 0.3);
+        0 18px 60px rgba(25, 0, 255, 0.4),
+        0 0 80px rgba(0, 208, 255, 0.796);
 }
 
 /* Agent Cards */
