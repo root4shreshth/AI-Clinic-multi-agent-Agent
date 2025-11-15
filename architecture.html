@@ -1,0 +1,160 @@
+import React from 'react';
+import { Users, Mic, Brain, FileText, AlertCircle, CheckCircle } from 'lucide-react';
+
+export default function MediScanArchitecture() {
+  const agents = [
+    {
+      id: 1,
+      name: "Voice Intake Specialist",
+      icon: Mic,
+      color: "bg-blue-500",
+      input: "Patient voice (phone/web/mobile)",
+      output: "Clean transcript + urgency detection",
+      tools: ["Google Speech-to-Text", "Audio Analysis"]
+    },
+    {
+      id: 2,
+      name: "Symptom Reasoning Engine",
+      icon: Brain,
+      color: "bg-purple-500",
+      input: "Transcript from Agent 1",
+      output: "Structured symptoms + clarifying questions",
+      tools: ["Gemini 2.0", "Medical Knowledge Base"]
+    },
+    {
+      id: 3,
+      name: "Document Processor",
+      icon: FileText,
+      color: "bg-green-500",
+      input: "Insurance cards, medical records, Rx",
+      output: "Extracted patient data + validation",
+      tools: ["Google Vision API", "Document AI"]
+    },
+    {
+      id: 4,
+      name: "Clinical Triage Coordinator",
+      icon: AlertCircle,
+      color: "bg-red-500",
+      input: "All agent outputs",
+      output: "Urgency level + clinical summary",
+      tools: ["Gemini 2.0", "Medical Decision Rules"]
+    },
+    {
+      id: 5,
+      name: "Care Plan Generator",
+      icon: CheckCircle,
+      color: "bg-yellow-500",
+      input: "Triage decision + patient data",
+      output: "Care instructions + appointments",
+      tools: ["Gemini 2.0", "Template Engine"]
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800 p-8">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-12">
+          <h1 className="text-5xl font-bold text-white mb-4">
+            MediScan Voice Triage & Coordinator
+          </h1>
+          <p className="text-xl text-blue-300">Multi-Agent AI Clinical Assistant System</p>
+        </div>
+
+        {/* Patient Input */}
+        <div className="flex justify-center mb-8">
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-6 shadow-2xl">
+            <Users className="w-12 h-12 text-white mx-auto mb-2" />
+            <div className="text-white font-bold text-lg">Patient Input</div>
+            <div className="text-blue-100 text-sm">Voice + Documents</div>
+          </div>
+        </div>
+
+        {/* Agents Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+          {agents.map((agent, idx) => {
+            const Icon = agent.icon;
+            return (
+              <div
+                key={agent.id}
+                className="bg-slate-800 rounded-xl p-6 border-2 border-slate-700 hover:border-slate-500 transition-all shadow-xl hover:shadow-2xl"
+              >
+                <div className="flex items-center mb-4">
+                  <div className={`${agent.color} p-3 rounded-lg mr-4`}>
+                    <Icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <div className="text-white font-bold text-lg">Agent {agent.id}</div>
+                    <div className="text-slate-400 text-sm">{agent.name}</div>
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                  <div>
+                    <div className="text-blue-400 text-xs font-semibold mb-1">INPUT</div>
+                    <div className="text-slate-300 text-sm">{agent.input}</div>
+                  </div>
+                  
+                  <div>
+                    <div className="text-green-400 text-xs font-semibold mb-1">OUTPUT</div>
+                    <div className="text-slate-300 text-sm">{agent.output}</div>
+                  </div>
+
+                  <div>
+                    <div className="text-purple-400 text-xs font-semibold mb-1">TOOLS</div>
+                    <div className="flex flex-wrap gap-1">
+                      {agent.tools.map((tool, i) => (
+                        <span
+                          key={i}
+                          className="bg-slate-700 text-slate-300 text-xs px-2 py-1 rounded"
+                        >
+                          {tool}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Output Streams */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-lg p-6 shadow-2xl">
+            <div className="text-white font-bold text-lg mb-2">Doctor View</div>
+            <div className="text-emerald-100 text-sm">
+              Structured clinical summary with red flags and recommendations
+            </div>
+          </div>
+          
+          <div className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg p-6 shadow-2xl">
+            <div className="text-white font-bold text-lg mb-2">Patient View</div>
+            <div className="text-blue-100 text-sm">
+              Personalized care instructions in patient's language
+            </div>
+          </div>
+          
+          <div className="bg-gradient-to-br from-orange-600 to-orange-700 rounded-lg p-6 shadow-2xl">
+            <div className="text-white font-bold text-lg mb-2">System Actions</div>
+            <div className="text-orange-100 text-sm">
+              Appointments, alerts, medication reminders
+            </div>
+          </div>
+        </div>
+
+        {/* Key Features */}
+        <div className="mt-12 bg-slate-800 rounded-xl p-8 border-2 border-slate-700">
+          <h2 className="text-2xl font-bold text-white mb-4">🚀 Revolutionary Features</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-slate-300">
+            <div>✅ Contextual Intelligence - Connects dots across data sources</div>
+            <div>✅ Proactive Care Management - End-to-end workflow automation</div>
+            <div>✅ Real-time Urgency Detection - Voice tone analysis</div>
+            <div>✅ Cross-validation - Voice symptoms vs. document data</div>
+            <div>✅ Confidence Scoring - Transparent AI decision-making</div>
+            <div>✅ Audit Trail - Full compliance with medical regulations</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
