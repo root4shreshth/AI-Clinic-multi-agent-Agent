@@ -1,21 +1,22 @@
 :root {
     /* Core Color Variables */
-    --bg-main: #000000;
-    --glow-purple: #6a0dad;
-    --glow-magenta: #d61aff;
-    --neon-pink: #ff4fd8;
-    --ring-gradient: linear-gradient(135deg, rgba(106, 13, 173, 0.3), rgba(214, 26, 255, 0.3));
-    
-    /* Updated Theme Variables */
-    --bg-900: #000000;
-    --panel: #0a0a0a;
-    --muted: #8b7fb8;
-    --accent: #d61aff;
-    --accent-2: #ff4fd8;
-    --glass: rgba(214, 26, 255, 0.03);
-    --glass-2: rgba(106, 13, 173, 0.02);
-    --card-border: rgba(214, 26, 255, 0.15);
+    --bg-main: #f5f9fc;            /* Soft medical white-blue */
+    --primary-blue: #1a73e8;       /* Trustworthy med-tech blue */
+    --aqua-teal: #33c8c1;          /* Fresh diagnostic/clinical accent */
+    --health-green: #36d98a;       /* Subtle wellness success color */
+    --alert-red: #ff5d5d;          /* Clean, non-harsh error color */
+
+    /* Enhanced Theme Variables */
+    --bg-900: #e9f1f7;             /* Light cool background layer */
+    --panel: #ffffff;              /* Panels/cards – clean white */
+    --muted: #7b8a9c;              /* Muted text/icons */
+    --accent: #1a73e8;             /* Primary accent */
+    --accent-2: #33c8c1;           /* Secondary accent */
+    --glass: rgba(26, 115, 232, 0.06);  /* Soft frosted blue */
+    --glass-2: rgba(51, 200, 193, 0.05);/* Subtle teal tint */
+    --card-border: rgba(0, 0, 0, 0.06); /* Light card border */
 }
+
 
 /* Global Page Background - Neon Cyberpunk */
 body {
