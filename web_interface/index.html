@@ -106,8 +106,8 @@
                             <span class="icon-emoji">🎤</span>
                         </div>
                         <div class="agent-info">
-                            <div class="agent-name">Agent 1</div>
-                            <div class="agent-role">Voice Intake</div>
+                            <div class="agent-name">Dr. Echo</div>
+                            <div class="agent-role">Voice Intake Specialist</div>
                         </div>
                     </div>
                     <div id="agent1Status" class="agent-status">Waiting...</div>
@@ -120,8 +120,8 @@
                             <span class="icon-emoji">🧠</span>
                         </div>
                         <div class="agent-info">
-                            <div class="agent-name">Agent 2</div>
-                            <div class="agent-role">Symptom Reasoning</div>
+                            <div class="agent-name">Dr. Insight</div>
+                            <div class="agent-role">Clinical Reasoning AI</div>
                         </div>
                     </div>
                     <div id="agent2Status" class="agent-status">Waiting...</div>
@@ -134,8 +134,8 @@
                             <span class="icon-emoji">📄</span>
                         </div>
                         <div class="agent-info">
-                            <div class="agent-name">Agent 3</div>
-                            <div class="agent-role">Document Processing</div>
+                            <div class="agent-name">DocuMed</div>
+                            <div class="agent-role">Document Intelligence</div>
                         </div>
                     </div>
                     <div id="agent3Status" class="agent-status">Waiting...</div>
@@ -148,8 +148,8 @@
                             <span class="icon-emoji">⚡</span>
                         </div>
                         <div class="agent-info">
-                            <div class="agent-name">Agent 4</div>
-                            <div class="agent-role">Triage Coordinator</div>
+                            <div class="agent-name">Dr. Priority</div>
+                            <div class="agent-role">Emergency Triage Coordinator</div>
                         </div>
                     </div>
                     <div id="agent4Status" class="agent-status">Waiting...</div>
@@ -162,8 +162,8 @@
                             <span class="icon-emoji">✅</span>
                         </div>
                         <div class="agent-info">
-                            <div class="agent-name">Agent 5</div>
-                            <div class="agent-role">Care Plan Generator</div>
+                            <div class="agent-name">CarePath</div>
+                            <div class="agent-role">Treatment Planning AI</div>
                         </div>
                     </div>
                     <div id="agent5Status" class="agent-status">Waiting...</div>
@@ -261,8 +261,7 @@
         }
 
         async function startDemo() {
-            const voiceInput = document.getElementById('voiceInput').value ||
-                "I've had fever for 2 days, cough, and tightness in my chest. I have high blood pressure and take lisinopril.";
+            const voiceInput = document.getElementById('voiceInput').value;
 
             document.getElementById('agentDashboard').classList.remove('hidden');
             document.getElementById('startDemo').disabled = true;
